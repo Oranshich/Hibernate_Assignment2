@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:oracle:thin:@ora1.ise.bgu.ac.il:1521:Oracle</property>
+    <property name="connection.driver_class">oracle.jdbc.OracleDriver</property>
+    <property name="connection.username">shichman</property>
+    <property name="connection.password">abcd</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <mapping class="Hibernate_classes.Mediaitems"/>
+    <mapping class="Hibernate_classes.Administrators"/>
+    <mapping class="Hibernate_classes.History"/>
+    <mapping class="Hibernate_classes.Loginlog"/>
+    <mapping class="Hibernate_classes.Similarity"/>
+    <mapping class="Hibernate_classes.Users"/>
+
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>
